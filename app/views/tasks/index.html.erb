@@ -1,0 +1,18 @@
+<div class="row">
+<div class="col-3">
+</div>
+<div class="col-6">
+
+<h1>Nouvelle tâche buddy P</h1>
+
+<% @tasks.each do |task| %>
+<ul style='list-style:none' class="list-group">
+<li> <%= check_box_tag 'completed', '1', task.completed, disabled: true%> <%= task.title%> <%= link_to "détails", task_path(task), class:"link-secondary" %> <%= link_to "éditer la tâche", edit_task_path(task) %> <%= link_to "🗑️",
+  task_path(task), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%></p></li>
+</ul>
+<% end %>
+
+<%= link_to "nouvelle tâche", new_task_path, class:"btn btn-primary" %>
+
+</div>
+</div>

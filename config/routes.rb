@@ -1,6 +1,12 @@
-Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+# frozen_string_literal: true
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+Rails.application.routes.draw do
+  # get 'index', to: 'tasks#index'
+  # get 'task/new', to: 'tasks#new'
+  # get 'index/:id', to: 'tasks#details', as: :task
+  # post 'task/new', to: 'tasks#create'
+  # get 'index/:id/edit', to: 'tasks#edit', as: :edit
+  # patch 'index/:id', to: 'tasks#update'
+  # delete 'index/:id', to: 'tasks#destroy'
+  resources :tasks
 end

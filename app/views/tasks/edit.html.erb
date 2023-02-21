@@ -1,0 +1,12 @@
+<h1>Editer votre tâche</h1>
+<p> <%= @task.title %> </p>
+
+<%= form_with model: @task do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :détails %>
+  <%= f.text_field :details %>
+  <%= f.label :fait! %>
+  <%= f.check_box :completed %>
+  <%= f.submit %>
+<% end %>
